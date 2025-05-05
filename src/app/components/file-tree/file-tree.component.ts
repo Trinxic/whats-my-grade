@@ -19,11 +19,10 @@ export interface FileNode {
 }
 
 @Component({
-  selector: "app-file-tree",
-  standalone: true,
-  imports: [CommonModule, MatTreeModule, MatButtonModule, MatIconModule],
-  templateUrl: "./file-tree.component.html",
-  styleUrls: ["./file-tree.component.css"],
+    selector: "app-file-tree",
+    imports: [CommonModule, MatTreeModule, MatButtonModule, MatIconModule],
+    templateUrl: "./file-tree.component.html",
+    styleUrls: ["./file-tree.component.css"]
 })
 export class FileTreeComponent {
   // TODO:
