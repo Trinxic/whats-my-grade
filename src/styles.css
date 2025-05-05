@@ -1,5 +1,13 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --text-color: #efdfdf;
+  --bg-color: #222436;
+  --fg-color: #a9b1d6: ;
+}
+
 body {
   height: 100%;
   margin: 0;
-  background-color: #222436; /* your desired color */
+  background-color: var(--bg-color); /* your desired color */
 }

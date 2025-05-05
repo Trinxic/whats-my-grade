@@ -1,0 +1,13 @@
+.file-tree {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.node {
+  cursor: pointer;
+  user-select: none;
+}
+
+.node:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

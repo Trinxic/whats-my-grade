@@ -1,0 +1,49 @@
+{
+    "default": {
+        "light": {},
+        "dark": {}
+    },
+    "tokyonight": {
+        "light": {
+            "name": "Tokyo Night - Light",
+            "colors": {
+                "clr": "#8c4351", // This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red
+                "clr": "#965027", // Number and Boolean constants, Language support constants
+                "clr": "#8f5e15", // Function parameters, Regex character sets, Terminal Yellow
+                "clr": "#634f30", // Parameters inside functions (semantic highlighting only)
+                "clr": "#385f0d", // Strings, CSS class names
+                "clr": "#33635c", // Object literal keys, Markdown links, Regex literal strings, Terminal Green
+                "clr": "#006c86", // Language support functions, CSS HTML elements
+                "clr": "#0f4b6e", // Object properties, Regex quantifiers and flags, Terminal Cyan, Markdown code, Import/export keywords
+                "clr": "#2959aa", // Function names, CSS property names, Markdown Headings, Terminal Blue
+                "clr": "#5a3e8e", // Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta
+                "fg": "#343b58", // Editor Foreground, Variables, Class names, Terminal White
+                "clr": "#40434f", // Markdown Text, HTML Text
+                "comment": "#6c6e75", // Comments
+                "terminal": "#343B58", // Terminal Black
+                "bg": "#e6e7ed", // Editor Background
+            }
+        },
+        "dark": {
+            "name": "Tokyo Night - Storm",
+            "colors": {
+                "clr": "#f7768e", // This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red
+                "clr": "#ff9e64", // Number and Boolean constants, Language support constants
+                "clr": "#e0af68", // Function parameters, Regex character sets, Terminal Yellow
+                "clr": "#cfc9c2", // Parameters inside functions (semantic highlighting only)
+                "clr": "#9ece6a", // Strings, CSS class names
+                "clr": "#73daca", // Object literal keys, Markdown links, Terminal Green
+                "literal": "#b4f9f8", // Regex literal strings
+                "clr": "#2ac3de", // Language support functions, CSS HTML elements
+                "clr": "#7dcfff", // Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords
+                "clr": "#7aa2f7", // Function names, CSS property names, Terminal Blue
+                "clr": "#bb9af7", // Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta
+                "fg": "#a9b1d6", // Editor Foreground
+                "clr": "#9aa5ce", // Markdown Text, HTML Text
+                "comment": "#565f89", // Comments
+                "terminal": "#414868", // Terminal Black
+                "bg": "#24283b" // Editor Background (Night)
+            }
+        }
+    }
+}
