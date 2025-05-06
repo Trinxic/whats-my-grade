@@ -8,6 +8,18 @@
   "permissions": [
     "core:default",
     "opener:default",
-    "fs:default"
+    "fs:default",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        {
+          "path": "$HOME/Documents/wmg-test"
+        },
+        {
+          "path": "$HOME/Documents/wmg-test/**"
+        }
+      ]
+    }
   ]
 }
+
