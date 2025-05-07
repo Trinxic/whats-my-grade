@@ -13,6 +13,7 @@ import { join } from "@tauri-apps/api/path";
 
 export interface FileNode {
   name: string;
+  isDirectory: boolean;
   children?: FileNode[];
 }
 
@@ -21,7 +22,7 @@ export interface FileNode {
   templateUrl: "./file-tree.component.html",
   styleUrl: "./file-tree.component.css",
   imports: [MatTreeModule, MatButtonModule, MatIconModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FileTreeComponent implements OnInit {
   // TODO:
@@ -29,7 +30,6 @@ export class FileTreeComponent implements OnInit {
   // - change to "Semesters"
   semestersBaseDir: BaseDirectory = BaseDirectory.Document;
   semestersDir: string = "wmg-test";
-  testText: string = "";
 
   childrenAccessor = (node: FileNode) => node.children ?? [];
   dataSource: FileNode[] = [];
@@ -37,17 +37,13 @@ export class FileTreeComponent implements OnInit {
     !!node.children && node.children.length > 0;
 
   async ngOnInit(): Promise<void> {
-    const tokenExists = exists(this.semestersDir, {
+    const dirExists = await exists(this.semestersDir, {
       baseDir: this.semestersBaseDir,
     });
-    if (!tokenExists) {
+    if (!dirExists) {
       // mkdir(this.semestersDir, { baseDir: this.semestersBaseDir });
-      this.testText = this.semestersDir + " Doesn't Exist";
-    } else {
-      // this.testText = "Loading Directories...";
-      this.dataSource = await this.loadDirectories(this.semestersDir);
-      this.testText = this.dataSource.toString();
     }
+    this.dataSource = await this.loadDirectories(this.semestersDir);
   }
 
   private async loadDirectories(dirPath: string): Promise<FileNode[]> {
@@ -63,6 +59,7 @@ export class FileTreeComponent implements OnInit {
 
       const node: FileNode = {
         name: entry.name,
+        isDirectory: entry.isDirectory,
         children: [],
       };
       if (entry.isDirectory) {
@@ -72,15 +69,5 @@ export class FileTreeComponent implements OnInit {
       nodes.push(node);
     }
     return nodes;
-  }
-
-  async testDirList(): Promise<void> {
-    const dirPath = this.semestersDir;
-    const entries: DirEntry[] = await readDir(dirPath, {
-      baseDir: this.semestersBaseDir,
-    });
-    for (const entry of entries) {
-      console.log(entry.name);
-    }
   }
 }

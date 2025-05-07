@@ -1,15 +1,13 @@
-/* @use "@angular/material" as mat; */
+@use "@angular/material" as mat;
 /* @use "@angular/material/theming" as mat-theme; */
 /* @use "@angular/material/core" as mat-core; */
 /* @use "@angular/material/typography" as mat-typography; */
 /* @use "@angular/material/icon" as mat-icon; */
 /* @use "@angular/material/button" as mat-button; */
 
-html,
-body {
-  height: 100%;
-}
+@import "./app/themes/themes.css";
 
-body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+/* html, */
+/* body { */
+/*   background-color: transparent; */
+/* } */

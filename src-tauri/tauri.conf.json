@@ -10,13 +10,7 @@
     "frontendDist": "../dist/whats-my-grade/browser"
   },
   "app": {
-    "windows": [
-      {
-        "title": "whats-my-grade",
-        "width": 800,
-        "height": 600
-      }
-    ],
+    "windows": [],
     "security": {
       "csp": null
     }
